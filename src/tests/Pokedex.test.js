@@ -21,7 +21,6 @@ describe('testa informações do componente', () => {
   test('se a Pokédex tem os botões de filtro', () => {
     renderWithRouter(<App />);
     const buttonFilter = screen.getAllByTestId('pokemon-type-button');
-    userEvent.click(buttonFilter[0]);
     expect(buttonFilter).toHaveLength(7);
 
     const buttonAll = screen.getByRole('button', { name: 'All' });
