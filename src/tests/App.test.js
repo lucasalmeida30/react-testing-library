@@ -38,5 +38,5 @@ test('se a aplicação é redirecionada para a página Not Found ao entrar em um
   const img = screen.getByRole('img', {
     name: /pikachu crying because the page requested was not found/i });
   expect(title).toBeInTheDocument();
-  expect(img).toBeInTheDocument();
+  expect(img.src).toBe('https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif');
 });
